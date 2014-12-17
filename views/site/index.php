@@ -1,51 +1,48 @@
 <?php
+
+use yii\base\Widget;
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+use app\models\RegistrationForm;
+
 /* @var $this yii\web\View */
 $this->title = 'My Yii Application';
 ?>
-<div class="site-index">
-
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
-
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
+<div class="container">
+    <div class="col-sm-9">owjoeifjow</div>
+    <div class="col-sm-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">Registration</div>
+            <div class="panel-body">
+                <?php $form = ActiveForm::begin(array(
+                    'options' => array()
+                ));?>
+                <?php $model = new RegistrationForm();?>
+                <?= $form->field($model, 'email')->textInput(array(
+                        'class'=>'form-control',
+                        'placeholder' => 'Email'
+                ));?>
+                <?= $form->field($model, 'firstName')->textInput(array(
+                        'class'=>'form-control',
+                        'placeholder' => 'First name'
+                ));?>
+                <?= $form->field($model, 'lastName')->textInput(array(
+                        'class'=>'form-control',
+                        'placeholder' => 'Last name'
+                ));?>
+                <?= $form->field($model, 'password')->textInput(array(
+                        'class'=>'form-control',
+                        'placeholder' => 'Password'
+                ));?>
+                <?= $form->field($model, 'confirmPassword')->textInput(array(
+                        'class'=>'form-control',
+                        'placeholder' => 'Confirm password'
+                ));?>
+                <div class="form-actions">
+                <?= Html::submitButton('Register', ['class' => 'btn btn-primary col-xs-12']);?>
+                </div>
+                <?php ActiveForm::end();?>
+            </div>    
         </div>
-
     </div>
 </div>
