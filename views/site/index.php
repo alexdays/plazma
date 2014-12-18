@@ -15,7 +15,9 @@ $this->title = 'My Yii Application';
             <div class="panel-heading">Registration</div>
             <div class="panel-body">
                 <?php $form = ActiveForm::begin(array(
-                    'options' => array()
+                    'options' => array(
+                        'method' => 'post'
+                    )
                 ));?>
                 <?php $model = new RegistrationForm();?>
                 <?= $form->field($model, 'email')->textInput(array(

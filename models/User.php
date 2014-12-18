@@ -6,19 +6,17 @@ use yii\db\ActiveRecord;
 
 class User extends ActiveRecord 
 {
-	public $id;
-	public $email;
-	public $firstName;
-	public $lastName;
-	public $password;
-
-	public static function tableName() 
+	public static function tableName()
 	{
 		return 'users';
 	}
 
 	public static function primaryKey() 
 	{
-		retur array('id');
+		return array('id');
 	}
+    public static function findByEmail($email)
+    {
+        return parent::findOne(['email'=>$email]);
+    }
 }
