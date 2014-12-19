@@ -31,20 +31,6 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        $user = new User();
-        $regForm = new RegistrationForm(Yii::$app->request->post('RegistrationForm'));
-        if (isset($regForm) && $regForm->validate()) {
-            $user->email = $regForm->email;
-            $user->firstName = $regForm->firstName;
-            $user->lastName = $regForm->lastName;
-            $user->password = $regForm->password;
-            $user->save();
-        }
         return $this->render('index');
     }   
-
-    public function actionRegister() 
-    {
-
-    } 
 }
