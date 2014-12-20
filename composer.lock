@@ -4,35 +4,96 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "37dfe1036144c8be2714c1c4e110e868",
+    "hash": "caa66c3887602fc02c40eab36440b360",
     "packages": [
         {
-            "name": "ajbdev/requirejs",
-            "version": "dev-master",
+            "name": "bower-asset/angular",
+            "version": "v1.3.8",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ajbdev/requirejs.git",
-                "reference": "967de2da7b02af8c42c715a924d44b6e229661e5"
+                "url": "https://github.com/angular/bower-angular.git",
+                "reference": "3c90c24001beb2e69bcadcd785a9b6194cf590c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ajbdev/requirejs/zipball/967de2da7b02af8c42c715a924d44b6e229661e5",
-                "reference": "967de2da7b02af8c42c715a924d44b6e229661e5",
+                "url": "https://api.github.com/repos/angular/bower-angular/zipball/3c90c24001beb2e69bcadcd785a9b6194cf590c0",
+                "reference": "3c90c24001beb2e69bcadcd785a9b6194cf590c0",
                 "shasum": ""
             },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD"
-            ],
-            "description": "RequireJS is a JavaScript file and module loader.",
-            "homepage": "http://requirejs.org/",
-            "keywords": [
-                "javascript",
-                "require",
-                "requirejs"
-            ],
-            "time": "2012-07-08 22:00:08"
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "./angular.js",
+                "bower-asset-ignore": []
+            }
+        },
+        {
+            "name": "bower-asset/angular-resource",
+            "version": "v1.3.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/angular/bower-angular-resource.git",
+                "reference": "6a0ac09fd580dc8d78c355f7785a696c0f95846b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/angular/bower-angular-resource/zipball/6a0ac09fd580dc8d78c355f7785a696c0f95846b",
+                "reference": "6a0ac09fd580dc8d78c355f7785a696c0f95846b",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/angular": "1.3.8"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "./angular-resource.js",
+                "bower-asset-ignore": []
+            }
+        },
+        {
+            "name": "bower-asset/angular-route",
+            "version": "v1.3.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/angular/bower-angular-route.git",
+                "reference": "b1cdc8bf8349ad5e317f4473f2bd3ae6fce0c7a5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/angular/bower-angular-route/zipball/b1cdc8bf8349ad5e317f4473f2bd3ae6fce0c7a5",
+                "reference": "b1cdc8bf8349ad5e317f4473f2bd3ae6fce0c7a5",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/angular": "1.3.8"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "./angular-route.js",
+                "bower-asset-ignore": []
+            }
+        },
+        {
+            "name": "bower-asset/angular-sanitize",
+            "version": "v1.3.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/angular/bower-angular-sanitize.git",
+                "reference": "9028ede5ed6a114cb30a72185ff07c04af4582df"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/angular/bower-angular-sanitize/zipball/9028ede5ed6a114cb30a72185ff07c04af4582df",
+                "reference": "9028ede5ed6a114cb30a72185ff07c04af4582df",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/angular": "1.3.8"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "./angular-sanitize.js",
+                "bower-asset-ignore": []
+            }
         },
         {
             "name": "bower-asset/bootstrap",
@@ -243,6 +304,28 @@
             "time": "2014-12-04 17:15:44"
         },
         {
+            "name": "bower-asset/yui",
+            "version": "v3.18.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yui/yui3.git",
+                "reference": "f7e7bcbcbd38b543bb1a7211d16283ba52563479"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yui/yui3/zipball/f7e7bcbcbd38b543bb1a7211d16283ba52563479",
+                "reference": "f7e7bcbcbd38b543bb1a7211d16283ba52563479",
+                "shasum": ""
+            },
+            "require-dev": {
+                "bower-asset/pure": "0.4.2"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "build/yui/yui.js"
+            }
+        },
+        {
             "name": "cebe/markdown",
             "version": "dev-master",
             "source": {
@@ -301,56 +384,6 @@
                 "markdown-extra"
             ],
             "time": "2014-12-18 00:45:32"
-        },
-        {
-            "name": "commonjs/commonjs",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DrBenton/CommonJSForPHP.git",
-                "reference": "4444cfcbfbdb7179314d04411501a7c96c67dccf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DrBenton/CommonJSForPHP/zipball/4444cfcbfbdb7179314d04411501a7c96c67dccf",
-                "reference": "4444cfcbfbdb7179314d04411501a7c96c67dccf",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "CommonJS": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Olivier Philippon",
-                    "homepage": "https://github.com/DrBenton"
-                }
-            ],
-            "description": "A simple CommonJS Module spec implementation for PHP 5.3+",
-            "homepage": "https://github.com/DrBenton/CommonJSForPHP",
-            "keywords": [
-                "commonjs",
-                "container",
-                "dependency injection",
-                "microframework",
-                "module",
-                "pattern"
-            ],
-            "time": "2013-09-12 09:57:36"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -450,49 +483,17 @@
             "time": "2014-12-05 14:17:46"
         },
         {
-            "name": "undefinedstudio/yii2-angularjs",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/undefinedstudio/yii2-angularjs.git",
-                "reference": "c36ee00d4843869e5866dc7ddec3075bbe9e751e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/undefinedstudio/yii2-angularjs/zipball/c36ee00d4843869e5866dc7ddec3075bbe9e751e",
-                "reference": "c36ee00d4843869e5866dc7ddec3075bbe9e751e",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "undefinedstudio\\angular\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Undefined Studio"
-                }
-            ],
-            "description": "Angular js Yii2 Module (AssetBundle)",
-            "time": "2014-10-06 13:09:34"
-        },
-        {
             "name": "yiisoft/yii2",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "7486f4271c17aaf749588f0c74f6b1d830bea6f8"
+                "reference": "ffa840f5f6bcb7fade1aae01ebd3b6e6e4308df0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/7486f4271c17aaf749588f0c74f6b1d830bea6f8",
-                "reference": "7486f4271c17aaf749588f0c74f6b1d830bea6f8",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/ffa840f5f6bcb7fade1aae01ebd3b6e6e4308df0",
+                "reference": "ffa840f5f6bcb7fade1aae01ebd3b6e6e4308df0",
                 "shasum": ""
             },
             "require": {
@@ -568,7 +569,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2014-12-19 09:32:25"
+            "time": "2014-12-19 12:41:34"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -1016,11 +1017,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "undefinedstudio/yii2-angularjs": 20,
-        "commonjs/commonjs": 20,
-        "ajbdev/requirejs": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
