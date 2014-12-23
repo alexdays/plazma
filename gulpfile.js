@@ -23,7 +23,7 @@ var paths = {
 var jsLibs = require('./jslibs');
 
 gulp.task('clean', function(done) {
-    del(['./protected/css/*', './protected/js/dist/*', './protected/fonts/*'], {force: true}, done);
+    del(['./protected/css/*', './protected/js/dist/*', './protected/fonts/*', './web/assets/*'], {force: true}, done);
 });
 
 gulp.task('copy:fonts', function() {
@@ -34,7 +34,7 @@ gulp.task('copy:fonts', function() {
 gulp.task('concat:devLibs', function() {
     return gulp.src(jsLibs(paths.bowerPath.replace('./', '')))
         .pipe(plugins.concat('lib.js'))
-        .pipe(gulp.dest('./web/assets/f8a9c73b/js/dist/'));
+        .pipe(gulp.dest('./protected/js/dist/'));
 });
 
 gulp.task('less', function() {
@@ -47,7 +47,7 @@ gulp.task('less', function() {
             ]
         }))
         .pipe(minifyCSS())
-        .pipe(gulp.dest('./web/assets/f8a9c73b/css/'));
+        .pipe(gulp.dest('./protected/css/'));
 });
 
 gulp.task('jshint', function() {
@@ -84,7 +84,7 @@ gulp.task('browserify', function () {
             .pipe(source('main.js'))
             .pipe(plugins.duration('bundle time'))
             .pipe(buffer())
-            .pipe(gulp.dest('./web/assets/f8a9c73b/js/dist/'))
+            .pipe(gulp.dest('./protected/js/dist/'))
             .pipe(plugins.livereload())
             .on('error', gutil.log);
     };

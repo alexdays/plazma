@@ -374,12 +374,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "ffa840f5f6bcb7fade1aae01ebd3b6e6e4308df0"
+                "reference": "f1ba87f5076647c19c9f9eb87d96f4c7297e371f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/ffa840f5f6bcb7fade1aae01ebd3b6e6e4308df0",
-                "reference": "ffa840f5f6bcb7fade1aae01ebd3b6e6e4308df0",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/f1ba87f5076647c19c9f9eb87d96f4c7297e371f",
+                "reference": "f1ba87f5076647c19c9f9eb87d96f4c7297e371f",
                 "shasum": ""
             },
             "require": {
@@ -455,7 +455,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2014-12-19 12:41:34"
+            "time": "2014-12-22 08:14:16"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -763,12 +763,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "f5ba19d53b8d7f69a26770f6e546d32c433fd6f7"
+                "reference": "7da794a53c4c91d906b1552a7bc73534d60b7307"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/f5ba19d53b8d7f69a26770f6e546d32c433fd6f7",
-                "reference": "f5ba19d53b8d7f69a26770f6e546d32c433fd6f7",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/7da794a53c4c91d906b1552a7bc73534d60b7307",
+                "reference": "7da794a53c4c91d906b1552a7bc73534d60b7307",
                 "shasum": ""
             },
             "require": {
@@ -802,7 +802,7 @@
                 "debugger",
                 "yii2"
             ],
-            "time": "2014-12-16 22:58:29"
+            "time": "2014-12-22 21:00:11"
         },
         {
             "name": "yiisoft/yii2-faker",

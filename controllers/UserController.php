@@ -32,25 +32,30 @@ class UserController extends Controller
 
 	public function actionRegister() 
 	{
-		$regFormReq = Yii::$app->request->post('RegistrationForm');
-		if (isset($regFormReq)) {
-			$regForm = new RegistrationForm($regFormReq);
-			if ($regForm->validate()) {
-				$user = new User();
-				$user->email = $regForm->email;
-				$user->firstName = $regForm->firstName;
-				$user->lastName = $regForm->lastName;
-				$user->password = $regForm->password;
-				$user->save();
-				return $this->redirect('site/index');
-			}
-		}
-		return $this->render('register');
+        if (Yii::$app->request->getIsPost()) {
+            Yii::$app->response->format='json';
+            $regFormReq = Yii::$app->request->post('userData');
+            if (isset($regFormReq)) {
+                $regForm = new RegistrationForm($regFormReq);
+                if ($regForm->validate()) {
+                    $user = new User();
+                    $user->email = $regForm->email;
+                    $user->firstName = $regForm->firstName;
+                    $user->lastName = $regForm->lastName;
+                    $user->password = $regForm->password;
+                    $user->save();
+                } else {
+                    return ["errors"=>"Errors with validation"];
+                }
+            }
+        }
 	}
 
 	public function actionLogin() 
 	{
-
+        Yii::$app->response->format='json';
+        if (Yii::$app->request->getIsPost()) return ["post"=>"post"];
+        return ["login"=>"login"];
 	}
 
 	public function actionLogout() 
