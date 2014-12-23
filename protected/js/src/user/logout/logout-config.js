@@ -3,9 +3,9 @@
 module.exports = ['$stateProvider',
 	function($stateProvider) {
 		$stateProvider
-			.state('registration',{
-				url: '/user/registration',
-				template: require('./registration.html')
+			.state('logout',{
+				url: '/user/logout',
+				template: ''
 			});
 	}
 ];
