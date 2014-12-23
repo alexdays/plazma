@@ -17,7 +17,8 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-    <div ng-view></div>
+    <menu></menu>
+    <ui-view></ui-view>
 
 <?php $this->endBody() ?>
 </body>

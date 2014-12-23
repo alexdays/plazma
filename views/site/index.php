@@ -7,7 +7,7 @@ use yii\widgets\ActiveForm;
 use app\models\RegistrationForm;
 
 /* @var $this yii\web\View */
-$this->title = 'My Yii Application';
+$this->title = 'Plazma development';
 ?>
 <div class="container">
     <div class="col-sm-9">
