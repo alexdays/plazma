@@ -8,9 +8,9 @@ $config = [
     'bootstrap' => ['log'],    
     'components' => [
         'request' => [
+            'class' => 'app\common\components\Request',
             'enableCookieValidation' => true,
-            'enableCsrfValidation' => false,
-            //'cookieValidationKey' => '1234567',
+            'enableCsrfValidation' => false
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',

@@ -5,7 +5,8 @@ module.exports = ['$stateProvider',
 		$stateProvider
 			.state('login', {
 				url: '/user/login',
-				template: require('./login.html')
+				template: require('./login.html'),
+				controller: 'LoginController'
 			});
 	}
 ];

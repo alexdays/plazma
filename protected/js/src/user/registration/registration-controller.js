@@ -11,14 +11,17 @@ module.exports = ['$scope', '$state', '$http',
 		};
 
 		$scope.submit = function() {
-			$http()
-				.post('user/register', $scope.userData)
-				.success(function(data) {
-					alert('Registration has successfully done');
-				})
-				.error(function() {
-					alert('Registration error');
-				});
+			$http({
+                url: '/user/register',
+                method: "POST",
+                data: $scope.userData
+            })
+            .success(function(data) {
+                $state.go('home');
+            })
+			.error(function() {
+				alert('Registration error');
+			});
 		};
 	}	
 ];

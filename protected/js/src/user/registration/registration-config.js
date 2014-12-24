@@ -5,7 +5,8 @@ module.exports = ['$stateProvider',
 		$stateProvider
 			.state('registration',{
 				url: '/user/registration',
-				template: require('./registration.html')
+				template: require('./registration.html'),
+				controller: 'RegistrationController'
 			});
 	}
 ];

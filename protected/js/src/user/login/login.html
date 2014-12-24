@@ -1,3 +1,18 @@
-<div>
- Login page
+<div class="col-sm-4 col-sm-offset-4">
+	<div class="panel panel-default">
+		<div class="panel-heading"><strong>Login</strong></div>
+		<form name="loginForm">
+		<div class="panel-body">
+			<div class="form-group">
+				<input type="text" name="email" ng-model="loginData.email" class="form-control" placeholder="Email" required/>
+			</div>
+			<div class="form-group">
+				<input type="password" name="password" ng-model="loginData.password" class="form-control" placeholder="Password" required/>
+			</div>
+		</div>
+		<div class="panel-footer">
+			<input type="submit" class="btn btn-warning btn-lg btn-block" value="Login"  ng-click="submit()"/>
+		</div>
+		</form>
+	</div>	
 </div>

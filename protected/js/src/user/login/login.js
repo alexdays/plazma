@@ -4,4 +4,5 @@ var angular = require('angular');
 
 angular
 	.module('Login',[])
-	.config(require('./login-config'));
+	.config(require('./login-config'))
+	.controller('LoginController', require('./login-controller'));

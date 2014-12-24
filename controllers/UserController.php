@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use yii\web\Controller;
 use app\models\RegistrationForm;
+use app\models\User;
 use Yii;
 
 class UserController extends Controller 
@@ -34,7 +35,7 @@ class UserController extends Controller
 	{
         if (Yii::$app->request->getIsPost()) {
             Yii::$app->response->format='json';
-            $regFormReq = Yii::$app->request->post('userData');
+            $regFormReq = Yii::$app->request->post();
             if (isset($regFormReq)) {
                 $regForm = new RegistrationForm($regFormReq);
                 if ($regForm->validate()) {
@@ -54,6 +55,7 @@ class UserController extends Controller
 	public function actionLogin() 
 	{
         Yii::$app->response->format='json';
+        $json = file_get_contents('php://input');
         if (Yii::$app->request->getIsPost()) return ["post"=>"post"];
         return ["login"=>"login"];
 	}
